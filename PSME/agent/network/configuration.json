@@ -1,0 +1,64 @@
+{
+    "service" : "network",
+    "agent": {
+        "vendor" : "Intel Corporation",
+        "capabilities" : [ "Network" ]
+    },
+    "server": {
+        "port": 7779
+    },
+    "registration": {
+        "ipv4": "127.0.0.1",
+        "port": 8383,
+        "interval": 3
+    },
+    "managers": [
+        {
+            "ipv4": "127.0.0.1",
+            "serialConsoleEnabled": true,
+            "switches": [
+                {
+                    "locationOffset": 10,
+                    "parentId": "1",
+                    "mgmt_port": "ma1",
+                    "qosConfiguration": {
+                        "lldpEnabled": true,
+                        "pfcEnabled": true,
+                        "qosApplicationProtocol": [
+                            {"protocol": "UDP", "port": 4791, "priority": 5}
+                        ],
+                        "qosPriorityToPriorityGroupMapping": [
+                            {"priority": 5, "priorityGroup": 1}
+                        ],
+                        "qosBandwidthAllocation": [
+                            {"priorityGroup": 1, "bandwidthPercent": 50}
+                        ]
+                    },
+                    "ports" : [
+                        {"id": "Default", "lldpEnabled": true, "dcbxState": "EnabledCEE", "pfcEnabled": true, "pfcEnabledPriorities": [5]},
+                        {"id": "Ethernet33", "portType": "Upstream"}
+                    ]
+                }
+            ]
+        }
+    ],
+    "database": {
+        "location": "/var/opt/psme/network"
+    },
+    "loggers" : [
+        {
+            "name" : "network-agent",
+            "level" : "INFO",
+            "timeformat" : "DATE_NS",
+            "color" : true,
+            "output" : true,
+            "tagging" : true,
+            "moredebug" : false,
+            "streams" : [
+                {
+                    "type" : "STDOUT"
+                }
+            ]
+        }
+    ]
+}
