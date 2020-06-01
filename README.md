@@ -1,4 +1,4 @@
-# 인톌 RSD v2.5 기반으로 한 렉 소프트웨어 
+# 인텔 RSD v2.5 기반으로 한 렉 소프트웨어 
 
 ## TEST 환경에 따른 설정 변경 요인
  1. DHCP Discovery를 위한 DHCP Server 설정 파일에 대한 수정
