@@ -6,7 +6,7 @@
 
  2. DHCP Discovery를 위한 각 서버의 hostname 변경
     
- 3. k8s 설정과 관련한 세팅을 위한 xml 파일 설정
+ 3. 8s 설정과 관련한 세팅을 위한 xml 파일 설정
 
 ## 변경 중인 사항
  1. RSME Agent 
