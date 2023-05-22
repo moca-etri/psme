@@ -43,7 +43,7 @@ setup(
               'fpgaof_helpers',
               ],
     url='',
-    install_requires=['requests==2.21.0'],
+    install_requires=['requests==2.31.0'],
     license='',
     entry_points={
         'console_scripts': [
